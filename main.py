@@ -1,4 +1,7 @@
+import sys
+import os
 from flask import Flask, jsonify, request
+sys.path.append(os.path.join(os.path.dirname(__file__), 'chemicalfun'))
 import chemicalfun as cf
 
 app = Flask(__name__)
