@@ -11,8 +11,8 @@ def generate_reactions():
     if not formulas:
         return jsonify({"error": "no formulas specified"}), 400
     try:
-        chemicaleeactions = cf.ChemicalReactions(formulas)
-        reactions = chemicalReactions.generateReactions()
+        chemicalreactions = cf.ChemicalReactions(formulas)
+        reactions = chemicalreactions.generateReactions()
         reactions_dict = [{el[0]: el[1] for el in r} for r in reactions]
         return jsonify(reactions_dict)
     except Exception as e:
